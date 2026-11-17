@@ -61,23 +61,7 @@ section{padding:88px 0}
 .piece h3{font-size:1.3rem;margin:14px 0 2px}.piece small{color:var(--mute)}
 .piece a{display:inline-block;margin-top:6px;font-size:.92rem;font-weight:600;color:var(--ev)}
 .split{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
-.portrait {
-    width: 100%;
-    max-width: 420px;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 16px;
-    margin: 0 auto;
-}
-
-.portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-\\.portrait{aspect-ratio:4/5;border-radius:200px 200px 8px 8px;background:linear-gradient(180deg,var(--sage2),var(--ev));display:grid;place-items:end center;color:var(--on-ev);padding:24px;text-align:center;font-style:italic;font-family:var(--serif);font-size:1.2rem}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px 8px 8px;background:linear-gradient(180deg,var(--sage2),var(--ev));display:grid;place-items:end center;color:var(--on-ev);padding:24px;text-align:center;font-style:italic;font-family:var(--serif);font-size:1.2rem}
 .band{background:var(--ev);color:var(--on-ev)}.band h2,.band h3{color:var(--on-ev)}.band p{color:#d7e3d6}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .band{background:#22352b}:root:not([data-theme="light"]) .band h2,:root:not([data-theme="light"]) .band h3{color:var(--ink)}}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
@@ -88,7 +72,7 @@ form{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);b
 label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
 input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--sage2);border-radius:8px;background:var(--cream);color:var(--ink);width:100%}
 textarea{min-height:130px;resize:vertical}
-.ok{display:none;background:var(--sage);padding:14px;border-radius:8px;font-weight:600}
+.ok{display:none;background:var(--sage);padding:14px;border-radius:8px;font-weight:600}.ok a{display:inline-block;margin:8px 8px 0 0;padding:8px 16px;font-size:.92rem}
 footer{background:var(--ev2);color:#e4ecdf;padding:48px 0 36px;font-size:.95rem}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}footer p{margin:0 0 .4em}
 footer a{margin-right:18px}footer .logo{color:#faf6ec}
@@ -137,31 +121,14 @@ nav.open{display:block}nav ul{flex-direction:column;gap:6px}nav a{display:block;
 <div class="grid" id="grid"></div>
 </div></section>
 
-
-<section class="band" id="story">
-    <div class="wrap split">
-
-        <div class="portrait">
-            <img src="images/c.jpg" alt="Portrait of Charissa" />
-        </div>
-
-        <div>
-            <h2>Her story</h2>
-
-            <p>
-                Charissa paints because the Pacific Northwest never stops giving her something to look at: fog lifting off a ridge, a fern uncurling, light on a river stone.
-            </p>
-
-            <p>
-                What began as painting for the joy of it grew into a studio full of canvases, stones and wood rounds, each finished with texture you can see and feel. This is where she shares that work, and where you can find a piece that feels like home.
-            </p>
-
-            <a class="btn" style="background:var(--sun);border-color:var(--sun);color:#26332b" href="#contact">Meet Charissa</a>
-        </div>
-
-    </div>
-</section>
-
+<section class="band" id="story"><div class="wrap split">
+<div class="portrait" role="img" aria-label="Portrait of Charissa (placeholder)">Portrait of Charissa goes here</div>
+<div>
+<h2>Her story</h2>
+<p>Charissa paints because the Pacific Northwest never stops giving her something to look at: fog lifting off a ridge, a fern uncurling, light on a river stone.</p>
+<p>What began as painting for the joy of it grew into a studio full of canvases, stones and wood rounds, each finished with texture you can see and feel. This is where she shares that work, and where you can find a piece that feels like home.</p>
+<a class="btn" style="background:var(--sun);border-color:var(--sun);color:#26332b" href="#contact">Meet Charissa</a>
+</div></div></section>
 
 <section id="process"><div class="wrap">
 <div class="sec-head"><h2>Inspiration &amp; process</h2><p>The studio starts outdoors. Charissa gathers ideas on trails and shorelines, then builds each piece in layers.</p></div>
@@ -186,13 +153,13 @@ nav.open{display:block}nav ul{flex-direction:column;gap:6px}nav a{display:block;
 <label>I’m asking about<select id="topic" name="topic"><option>An available piece</option><option>A custom commission</option><option>Something else</option></select></label>
 <label>Message<textarea required name="msg"></textarea></label>
 <button class="btn" type="submit">Send message</button>
-<div class="ok" id="ok" role="status">Your email app should open with your message ready. Just press send.</div>
+<div class="ok" id="ok" role="status"></div>
 </form></div></section>
 </main>
 
 <footer><div class="wrap">
 <div><a class="logo" href="#home">Charissa’s Art Haven</a><p>Handmade, nature-inspired art from the Pacific Northwest.</p></div>
-<div><p><a href="#gallery">Gallery</a><a href="#story">Her Story</a><a href="#process">Process</a><a href="#contact">Contact</a></p><a href="mailto:charissa.durham@hotmail.com">Email Me </a> · Instagram · Facebook</p></div>
+<div><p><a href="#gallery">Gallery</a><a href="#story">Her Story</a><a href="#process">Process</a><a href="#contact">Contact</a></p><p><a href="mailto:Charissa.Durham@hotmail.com">Charissa.Durham@hotmail.com</a> · Instagram · Facebook</p></div>
 </div></footer>
 
 <dialog id="dlg" aria-label="Artwork detail"><div class="lb">
@@ -204,9 +171,9 @@ nav.open{display:block}nav ul{flex-direction:column;gap:6px}nav a{display:block;
 <script>
 /* ADD YOUR IMAGES HERE: put each photo's file name or address inside img:"" on the matching piece below. Leave img:"" empty to keep the placeholder. */
 var items=[
-{img:"images/flower_rock.jpg",t:"Flowerful Rock",k:"canvas",m:"Acrylic on Rock",d:"Beautiful flowers glowing on a rock.",bg:"linear-gradient(180deg,#d9e6ea,#b9c9b0 45%,#254735)"},
-{img:"images/clouds.jpg",t:"Sky Thoughts",k:"canvas",m:"Acrylic on canvas",d:"Sky beginnings.  Letting my mind drift and see what comes.",bg:"radial-gradient(circle at 25% 70%,#ee7a62 0 8%,transparent 9%),radial-gradient(circle at 60% 78%,#e8b43c 0 9%,transparent 10%),radial-gradient(circle at 80% 65%,#c9477f 0 7%,transparent 8%),linear-gradient(180deg,#9fd0e6,#7fae78)"},
-{img:"images/mount.jpg",t:"River Stone",k:"rock",m:"Acrylic on river rock",d:"A smooth stone holding a quiet little forest.",bg:"linear-gradient(160deg,#6fb3d6,#4d8f78 70%,#254735)"},
+{img:"",t:"Morning Mist",k:"canvas",m:"Acrylic on canvas",d:"Fog lifting through evergreens at first light.",bg:"linear-gradient(180deg,#d9e6ea,#b9c9b0 45%,#254735)"},
+{img:"",t:"Wildflower Meadow",k:"canvas",m:"Acrylic on canvas",d:"A hillside of coral, sunshine and berry blooms.",bg:"radial-gradient(circle at 25% 70%,#ee7a62 0 8%,transparent 9%),radial-gradient(circle at 60% 78%,#e8b43c 0 9%,transparent 10%),radial-gradient(circle at 80% 65%,#c9477f 0 7%,transparent 8%),linear-gradient(180deg,#9fd0e6,#7fae78)"},
+{img:"",t:"River Stone",k:"rock",m:"Acrylic on river rock",d:"A smooth stone holding a quiet little forest.",bg:"linear-gradient(160deg,#6fb3d6,#4d8f78 70%,#254735)"},
 {img:"",t:"Autumn Fern",k:"rock",m:"Acrylic on stone",d:"Gold and rust leaves layered over green.",bg:"linear-gradient(135deg,#e8b43c,#ee7a62 55%,#8a3d2e)"},
 {img:"",t:"Heartwood",k:"wood",m:"Acrylic on wood round",d:"Growth rings echoed in rings of paint.",bg:"repeating-radial-gradient(circle,#d9b77a 0 6px,#c79a55 6px 10px)"},
 {img:"",t:"Mountain Sunrise",k:"wood",m:"Acrylic on wood round",d:"Sunlight spilling over a Cascade ridge.",bg:"radial-gradient(circle at 50% 38%,#e8b43c 0 14%,transparent 15%),linear-gradient(180deg,#f6c9a0,#ee7a62 55%,#254735 56%)"},
@@ -250,12 +217,16 @@ c.setAttribute("aria-pressed","true");render(c.dataset.f)}});
 var menu=document.getElementById("menu"),nav=document.getElementById("nav");
 menu.onclick=function(){var o=nav.classList.toggle("open");menu.setAttribute("aria-expanded",o)};
 nav.querySelectorAll("a").forEach(function(a){a.onclick=function(){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
+var TO="Charissa.Durham@hotmail.com";
 document.getElementById("form").onsubmit=function(e){
 e.preventDefault();var f=e.target.elements;
 var s="Website inquiry: "+f["topic"].value;
 var b="Name: "+f["name"].value+"\nEmail: "+f["email"].value+"\n\n"+f["msg"].value;
-location.href="mailto:Charissa.Durham@hotmail.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);
-document.getElementById("ok").style.display="block"};
+var q=function(x){return encodeURIComponent(x)};
+var L=[["Gmail","https://mail.google.com/mail/?view=cm&fs=1&to="+q(TO)+"&su="+q(s)+"&body="+q(b)],["Yahoo Mail","https://compose.mail.yahoo.com/?to="+q(TO)+"&subject="+q(s)+"&body="+q(b)],["Outlook.com / Hotmail","https://outlook.live.com/mail/0/deeplink/compose?to="+q(TO)+"&subject="+q(s)+"&body="+q(b)],["Email app on this device","mailto:"+TO+"?subject="+q(s)+"&body="+q(b)]];
+var ok=document.getElementById("ok");
+ok.innerHTML="Almost done. Choose where to send your message from:<br>"+L.map(function(x){return '<a class="btn ghost"'+(x[1].indexOf("http")===0?' target="_blank" rel="noopener"':'')+' href="'+x[1]+'">'+x[0]+'</a>'}).join("")+'<br><small style="font-weight:400">Or email '+TO+' directly.</small>';
+ok.style.display="block"};
 render("all");
 </script>
 </body>
