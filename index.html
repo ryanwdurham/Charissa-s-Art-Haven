@@ -254,7 +254,7 @@ document.getElementById("form").onsubmit=function(e){
 e.preventDefault();var f=e.target.elements;
 var s="Website inquiry: "+f["topic"].value;
 var b="Name: "+f["name"].value+"\nEmail: "+f["email"].value+"\n\n"+f["msg"].value;
-location.href="mailto:Charissa.Durham@hotmail.com.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);
+location.href="mailto:Charissa.Durham@hotmail.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);
 document.getElementById("ok").style.display="block"};
 render("all");
 </script>
